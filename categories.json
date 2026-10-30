@@ -1,0 +1,8 @@
+[
+  { "slug": "launch", "name": "Launch Platforms", "description": "Launch day sites where new products get upvoted and discovered" },
+  { "slug": "communities", "name": "Communities", "description": "Maker communities to build in public and get feedback" },
+  { "slug": "reddit", "name": "Reddit", "description": "Subreddits that welcome makers sharing their work" },
+  { "slug": "directories", "name": "Directories", "description": "Lists and catalogs that keep your product discoverable" },
+  { "slug": "deals", "name": "Deals", "description": "Deal sites and seasonal lists, like Black Friday roundups" },
+  { "slug": "marketplaces", "name": "Marketplaces", "description": "Sell or show off a side project or online business" }
+]

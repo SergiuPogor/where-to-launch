@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Place",
+  "description": "One place to launch or share a product: places/<slug>.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "url", "description", "category"],
+  "properties": {
+    "name": { "type": "string", "minLength": 1, "maxLength": 60, "pattern": "^[^\\n]+$" },
+    "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+    "description": { "description": "What it is and who it reaches", "type": "string", "minLength": 10, "maxLength": 160, "pattern": "^[^\\n]+$" },
+    "category": { "description": "A slug from categories.json", "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "pricing": { "description": "Leave it out when listing is free", "enum": ["freemium", "paid"] },
+    "icon": { "description": "Square logo", "type": "string", "format": "uri", "pattern": "^https://" }
+  }
+}

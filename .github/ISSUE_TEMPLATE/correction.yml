@@ -1,0 +1,17 @@
+name: Report a problem
+description: A place is down, has moved, or is listed wrongly.
+title: "Fix: "
+labels: ["correction"]
+body:
+  - type: input
+    id: place
+    attributes:
+      label: Which place?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+    validations:
+      required: true

@@ -1,0 +1,29 @@
+name: deploy
+
+# Rebuilds https://indiegoodies.com/where-to-launch: the site is static on Vercel and fetches this
+# repo's main at build time. Calls the Vercel Deploy Hook (secret VERCEL_DEPLOY_HOOK_URL) on every
+# push to main (a merged PR). Keep it to this trigger: no manual, API-dispatched, reusable or PR
+# triggers, so the hook URL never reaches PR code.
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['README.md', 'CONTRIBUTING.md', '.github/**']
+
+permissions: {}
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Call the Vercel Deploy Hook
+        run: |
+          if [ -z "$DEPLOY_HOOK" ]; then echo "VERCEL_DEPLOY_HOOK_URL is not set"; exit 0; fi
+          curl -fsS -X POST "$DEPLOY_HOOK" > /dev/null
+        env:
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
