@@ -6,6 +6,11 @@ it's merged the place shows up on [indiegoodies.com/where-to-launch](https://ind
 
 Not comfortable editing JSON? [Suggest a place with the form](../../issues/new/choose) instead.
 
+## Before you start
+
+By contributing, you agree to the terms in [LICENSE](LICENSE): your contribution may be used by the
+maintainers, and the data may not be reused elsewhere.
+
 ## What belongs here
 
 A site, community or list where makers can launch, list or share a product, that is active and

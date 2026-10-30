@@ -15,3 +15,7 @@ places/<slug>.json       one place
 schema/*.schema.json     JSON Schema of each file
 scripts/validate.mjs     the check that runs on every pull request
 ```
+
+## License
+
+See [LICENSE](LICENSE).

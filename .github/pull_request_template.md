@@ -8,3 +8,4 @@
 - [ ] I searched `places/` and it isn't listed yet.
 - [ ] The link has no affiliate or tracking parameters.
 - [ ] `npm run validate` passes.
+- [ ] I agree that my contribution is licensed to the maintainers under the terms in [LICENSE](../LICENSE).
